@@ -1,8 +1,8 @@
 # RobloxAPID Nix Flake
 
-Nix flake providing a Nix package and NixOS module for the RobloxAPID daemon.
+Nix flake providing a Nix package and NixOS module for the [RobloxAPID](https://github.com/paradoxum-wikis/RobloxAPID) daemon.
 
-## Usage (NixOS):
+## Usage (NixOS)
 
 **1. Add as input:**
 
@@ -28,13 +28,14 @@ services.robloxapid.configFile = "/etc/robloxapid/config.json";
 sudo nixos-rebuild switch --flake /etc/nixos#your-hostname
 ```
 
-## Run package only:
+## Package only
 
 ```sh
 nix run github:t7ru/robloxapid-nix#robloxapid
 ```
 
-## Notes:
+## Notes
 
 - Default config path is `/etc/robloxapid/config.json`.
 - Please for the love of god use sops-nix or agenix for secrets.
+- This flake is under [MIT](LICENSE), but RobloxAPID is under [AGPLv3](https://github.com/paradoxum-wikis/RobloxAPID/blob/main/LICENSE).
